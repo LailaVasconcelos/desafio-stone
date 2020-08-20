@@ -3,7 +3,7 @@ defmodule DesafioStone do
   Documentation para DesafioStone.
   """
 
-  @conversoes %{"BRLEUR" => 0.22, "EURBRL" => 6.3, "BRLUSD" => 0.18, "USDBRL" => 5.43}
+  @conversoes %{"BRL" => %{"EUR" => 0.22, "USD" => 0.17}, "EUR" => %{"BRL" => 6.3}}
 
   @doc """
   Faz a conversão de valores entre moedas
@@ -16,8 +16,12 @@ defmodule DesafioStone do
 
   """
   def converte_moeda(moeda1, moeda2, valor) do
-    if Map.has_key?(@conversoes, moeda1 <> moeda2) do
-      valor * @conversoes[moeda1 <> moeda2]
+    if Map.has_key?(@conversoes, moeda1) do
+      if Map.has_key?(@conversoes[moeda1], moeda2) do
+          valor * @conversoes[moeda1][moeda2]
+      else
+        nil
+      end
     else
       nil
     end

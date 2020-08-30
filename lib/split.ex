@@ -2,7 +2,7 @@ defmodule DesafioStone.Split do
   @moduledoc """
   Documentation para Split.
   """
-  
+
   @doc """
   Faz rateio de valores monetários entre vários indivíduos
 
@@ -24,16 +24,15 @@ defmodule DesafioStone.Split do
   %{:nome => "Marina", :peso => Decimal.new(10), :valor => Decimal.new("277.78")}, 
   ]
 
-  """ 
+  """
   def operacao_split(lista_pessoas, valor) do
     alias Decimal, as: D
 
-    total_pesos = Enum.map(lista_pessoas, fn item -> item[:peso] end) 
+    total_pesos = Enum.map(lista_pessoas, fn item -> item[:peso] end)
     |> Enum.reduce(D.new("0"), fn (a, b) -> D.add(a, b) end)
-    
+
     divisao = D.div(valor, total_pesos)
 
-    Enum.map(lista_pessoas, fn item -> Map.put(item, :valor, D.round(D.mult(divisao, item[:peso]), 2)) end)     
-  
+    Enum.map(lista_pessoas, fn item -> Map.put(item, :valor, D.round(D.mult(divisao, item[:peso]), 2)) end)
   end
 end

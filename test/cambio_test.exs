@@ -7,6 +7,6 @@ defmodule DesafioStone.CambioTest do
   end
 
   test "Verifica se retorna nulo para conversão não suportadas" do
-    assert DesafioStone.Cambio.converte_moeda(:BRL, :ARS, Decimal.new("55")) == nil  
+    assert DesafioStone.Cambio.converte_moeda(:BRL, :ARS, Decimal.new("55")) == nil
   end
 end

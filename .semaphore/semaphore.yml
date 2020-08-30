@@ -31,10 +31,12 @@ blocks:
       jobs:
       - name: credo
         commands:
+        - mix deps.get
         - mix credo --strict
 
       - name: formatter
         commands:
+        - mix deps.get
         - mix format mix.exs "lib/**/*.{ex,exs}" "test/**/*.{ex,exs}" --check-formatted
 
   - name: "Executa testes"
@@ -48,4 +50,5 @@ blocks:
       jobs:
       - name: "Testes Unitários"
         commands:
+        - mix deps.get
         - mix test

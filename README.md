@@ -1,19 +1,21 @@
 # DesafioStone
 
-**TODO: Add description**
+Código para o desafio da stone
 
-## Installation
+## Como instalar e compilar
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `desafio_stone` to your list of dependencies in `mix.exs`:
-
-```elixir
-def deps do
-  [
-    {:desafio_stone, "~> 0.1.0"}
-  ]
-end
+```sh
+mix deps.get
+mix compile --warnings-as-errors
 ```
+
+## Como executar os testes
+
+```sh
+mix test
+```
+
+## Como gerar a documentação
 
 Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
 and published on [HexDocs](https://hexdocs.pm). Once published, the docs can

@@ -12,7 +12,7 @@ blocks:
       - name: "Baixa dependencias e compila"
         commands:
           - checkout
-          - sem-version elixir 1.10
+          - sem-version elixir 1.10.4
           - cache restore
 
           - mix deps.get
@@ -26,7 +26,7 @@ blocks:
       prologue:
         commands:
         - checkout
-        - sem-version elixir 1.10
+        - sem-version elixir 1.10.4
         - cache restore
       jobs:
       - name: credo
@@ -42,7 +42,7 @@ blocks:
       prologue:
         commands:
         - checkout
-        - sem-version elixir 1.10
+        - sem-version elixir 1.10.4
         - cache restore
 
       jobs:

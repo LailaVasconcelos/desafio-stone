@@ -3,7 +3,10 @@ defmodule DesafioStone.Cambio do
   Documentation para Cambio.
   """
 
-  @conversoes %{:BRL => %{:EUR => Decimal.new("0.22"), :USD =>  Decimal.new("0.17")}, :EUR => %{:BRL => Decimal.new("6.3")}}
+  @conversoes %{
+    :BRL => %{:EUR => Decimal.new("0.22"), :USD => Decimal.new("0.17")},
+    :EUR => %{:BRL => Decimal.new("6.3")}
+  }
 
   @doc """
   Faz a conversão de valores entre moedas
@@ -17,7 +20,7 @@ defmodule DesafioStone.Cambio do
   def converte_moeda(moeda1, moeda2, valor) do
     if Map.has_key?(@conversoes, moeda1) do
       if Map.has_key?(@conversoes[moeda1], moeda2) do
-          Decimal.mult(valor, @conversoes[moeda1][moeda2])
+        Decimal.mult(valor, @conversoes[moeda1][moeda2])
       else
         nil
       end

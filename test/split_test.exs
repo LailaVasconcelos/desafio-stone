@@ -1,6 +1,6 @@
-defmodule SplitTest do
+defmodule DesafioStone.SplitTest do
   use ExUnit.Case
-  doctest Split
+  doctest DesafioStone.Split
 
   test "Testa os valores do resultado do split para 3 pessoas" do
     lista_pessoas_split = [
@@ -14,7 +14,7 @@ defmodule SplitTest do
       %{:nome => "Marina", :peso => Decimal.new(10), :valor => Decimal.new("277.78")},
     ]
 
-    assert Split.operacao_split(lista_pessoas_split, Decimal.new("500")) == resultado_esperado
+    assert DesafioStone.Split.operacao_split(lista_pessoas_split, Decimal.new("500")) == resultado_esperado
   end
 
   test "Verifica se o split está com problemas de arrendodamento" do
@@ -24,7 +24,7 @@ defmodule SplitTest do
       %{:nome => "Joaquim", :peso => Decimal.new(3)},
       %{:nome => "Marina", :peso => Decimal.new(10)},
     ]
-    resultado = Split.operacao_split(lista_pessoas_split, valor_original)
+    resultado = DesafioStone.Split.operacao_split(lista_pessoas_split, valor_original)
     valor_total = resultado |> Enum.map(fn item -> item[:valor] end) |> Enum.reduce(Decimal.new("0"), fn (a, b) -> Decimal.add(a, b) end)
 
     assert valor_total == valor_original

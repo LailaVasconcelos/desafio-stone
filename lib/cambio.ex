@@ -1,4 +1,4 @@
-defmodule Cambio do
+defmodule DesafioStone.Cambio do
   @moduledoc """
   Documentation para Cambio.
   """
@@ -10,7 +10,7 @@ defmodule Cambio do
 
   ## Examples
 
-      iex> Cambio.converte_moeda(:BRL, :EUR, Decimal.new("100"))
+      iex> DesafioStone.Cambio.converte_moeda(:BRL, :EUR, Decimal.new("100"))
       #Decimal<22.00>
 
   """

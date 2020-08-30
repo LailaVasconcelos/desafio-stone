@@ -11,7 +11,7 @@ defmodule Split do
     
     divisao = D.div(valor, total_pesos)
 
-    item_valor_inserido = Enum.map(lista_pessoas, fn item -> Map.put(item, :valor, D.mult(divisao, item[:peso])) end)     
+    item_valor_inserido = Enum.map(lista_pessoas, fn item -> Map.put(item, :valor, D.round(D.mult(divisao, item[:peso]), 2)) end)     
     
   end
 end

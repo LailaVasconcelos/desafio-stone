@@ -14,18 +14,18 @@ defmodule DesafioStone.Cambio do
   ## Examples
 
       iex> DesafioStone.Cambio.converte_moeda(:BRL, :EUR, Decimal.new("100"))
-      #Decimal<22.00>
+      {:ok, Decimal.new("22.00")}
 
   """
-  def converte_moeda(moeda1, moeda2, valor) do
-    if Map.has_key?(@conversoes, moeda1) do
-      if Map.has_key?(@conversoes[moeda1], moeda2) do
-        Decimal.mult(valor, @conversoes[moeda1][moeda2])
+  def converte_moeda(moeda_origem, moeda_destino, valor) do
+    if Map.has_key?(@conversoes, moeda_origem) do
+      if Map.has_key?(@conversoes[moeda_origem], moeda_destino) do
+        {:ok, Decimal.new(Decimal.mult(valor, @conversoes[moeda_origem][moeda_destino]))}
       else
-        nil
+        {:error, :moeda_nao_suportada}
       end
     else
-      nil
+      {:error, :moeda_nao_suportada}
     end
   end
 end

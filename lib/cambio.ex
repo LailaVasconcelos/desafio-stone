@@ -23,7 +23,7 @@ defmodule DesafioStone.Cambio do
       {:ok, Decimal.new("22.00")}
 
   """
-  
+
   def converte_moeda(moeda_origem, moeda_destino, valor) do
     if Map.has_key?(@conversoes, moeda_origem) do
       if Map.has_key?(@conversoes[moeda_origem], moeda_destino) do

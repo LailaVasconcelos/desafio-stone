@@ -1,6 +1,6 @@
 defmodule DesafioStone.SplitTest do
   @moduledoc false
-  
+
   use ExUnit.Case
   doctest DesafioStone.Split
 

@@ -25,7 +25,7 @@ defmodule DesafioStone.Split do
   ]
 
   """
-  
+
   def operacao_split(lista_pessoas, valor) do
     alias Decimal, as: D
 

@@ -1,6 +1,6 @@
 defmodule DesafioStone.MixProject do
   @moduledoc false
-  
+
   use Mix.Project
 
   def project do

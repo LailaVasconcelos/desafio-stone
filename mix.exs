@@ -23,6 +23,7 @@ defmodule DesafioStone.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
+      {:git_hooks, "~> 0.4.0", only: [:test, :dev], runtime: false},
       {:earmark, "~> 1.2", only: :dev},
       {:ex_doc, "~> 0.19", only: :dev},
       {:credo, "~> 1.4", only: [:dev, :test], runtime: false},

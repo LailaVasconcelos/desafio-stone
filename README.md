@@ -6,6 +6,8 @@ Código para o desafio da stone
 
 ```sh
 mix deps.get
+mkdir -p .git/hooks
+mix git_hooks.install
 mix compile --warnings-as-errors
 ```
 

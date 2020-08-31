@@ -1,4 +1,6 @@
 defmodule DesafioStone.CambioTest do
+  @moduledoc false
+  
   use ExUnit.Case
   doctest DesafioStone.Cambio
 

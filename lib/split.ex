@@ -4,7 +4,7 @@ defmodule DesafioStone.Split do
   """
 
   @doc """
-  Faz rateio de valores monetários entre vários indivíduos
+  Faz rateio de valores monetários entre vários indivíduos.
 
   ## Parâmetros
 
@@ -25,6 +25,7 @@ defmodule DesafioStone.Split do
   ]
 
   """
+  
   def operacao_split(lista_pessoas, valor) do
     alias Decimal, as: D
 

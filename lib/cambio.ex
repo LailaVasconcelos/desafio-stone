@@ -9,7 +9,13 @@ defmodule DesafioStone.Cambio do
   }
 
   @doc """
-  Faz a conversão de valores entre moedas
+  Faz a conversão de valores entre moedas.
+
+  ## Parâmetros
+
+  - moeda_origem: Atom que representa a moeda de origem.
+  - moeda_destino: Atom que representa a moeda de destino.
+  - valor: Decimal que representa o valor para fazer o split.
 
   ## Examples
 
@@ -17,6 +23,7 @@ defmodule DesafioStone.Cambio do
       {:ok, Decimal.new("22.00")}
 
   """
+  
   def converte_moeda(moeda_origem, moeda_destino, valor) do
     if Map.has_key?(@conversoes, moeda_origem) do
       if Map.has_key?(@conversoes[moeda_origem], moeda_destino) do

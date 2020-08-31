@@ -1,4 +1,6 @@
 defmodule DesafioStone.MixProject do
+  @moduledoc false
+  
   use Mix.Project
 
   def project do
@@ -21,6 +23,8 @@ defmodule DesafioStone.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
+      {:earmark, "~> 1.2", only: :dev},
+      {:ex_doc, "~> 0.19", only: :dev},
       {:credo, "~> 1.4", only: [:dev, :test], runtime: false},
       {:doctor, "~> 0.15.0", only: [:dev, :test], runtime: false},
       {:decimal, "~> 1.8"}

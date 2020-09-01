@@ -15,6 +15,7 @@ blocks:
           - sem-version elixir 1.10.4
           - cache restore
 
+          - mix local.rebar --fo
           - mix deps.get
           - mix do compile 
           - MIX_ENV=test mix compile

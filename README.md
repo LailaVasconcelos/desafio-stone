@@ -17,6 +17,12 @@ mix compile --warnings-as-errors
 mix test
 ```
 
+## Como buildar
+
+```sh
+mix escript.build
+```
+
 ## Como gerar a documentação
 
 Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)

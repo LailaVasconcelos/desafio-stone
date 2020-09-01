@@ -9,7 +9,9 @@ defmodule DesafioStone.CliTest do
     DesafioStone.Cli.main(["--help"])
 
     assert_called(
-      IO.puts(:meck.is(fn texto -> String.starts_with?(texto, "Uso: ./desafio_stone [OPCOES]") end))
+      IO.puts(
+        :meck.is(fn texto -> String.starts_with?(texto, "Uso: ./desafio_stone [OPCOES]") end)
+      )
     )
   end
 

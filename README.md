@@ -1,6 +1,7 @@
 # DesafioStone
 
-Código para o desafio da stone
+A aplicação realiza split de transações financeiras entre diferentes indivíduos.
+A aplicação realiza câmbio entre moedas distintas. O sistema está em conformidade com a ISO 4217.
 
 ## Como instalar e compilar
 
@@ -23,9 +24,23 @@ mix test
 mix escript.build
 ```
 
+## Como executar a aplicação
+
+### Para realizar uma operação de câmbio
+
+```sh
+./desafio_stone -c 500.00 --origem EUR --destino BRL
+```
+
+### Para realizar uma operação de câmbio
+
+```sh
+./desafio_stone -s 300.00 joaquim=34 joana=67
+```
+
 ## Como gerar a documentação
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/desafio_stone](https://hexdocs.pm/desafio_stone).
-
+```sh
+mix deps.get
+mix docs
+```

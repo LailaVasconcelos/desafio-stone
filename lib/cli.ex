@@ -7,7 +7,7 @@ defmodule DesafioStone.Cli do
   @doc """
   Esse método é chamado quando a aplicação é executada
 
-  ## Parameters
+  ## Parâmetros
 
     - argv: list Lista de argumentos passados na linha comando.
 
@@ -52,7 +52,7 @@ defmodule DesafioStone.Cli do
 
   defp run(:help) do
     Bunt.puts("""
-    Uso: ./minhapp [OPCOES] 
+    Uso: ./desafio_stone [OPCOES] 
     [--help|-h]                                               - Mostra esse help
 
     Opções:

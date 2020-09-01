@@ -17,7 +17,7 @@ defmodule DesafioStone.Cambio do
   - moeda_destino: Atom que representa a moeda de destino.
   - valor: Decimal que representa o valor para fazer o split.
 
-  ## Examples
+  ## Exemplos
 
       iex> DesafioStone.Cambio.converte_moeda(:BRL, :EUR, Decimal.new("100"))
       {:ok, Decimal.new("22.00")}
